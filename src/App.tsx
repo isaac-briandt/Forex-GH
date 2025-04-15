@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 
-function App() {
+export default function App() {
   return (
     <>
       <main className="relative bg-[#0052B4A6] bg-blend-soft-light bg-[url(/images/forexbgimg.jpeg)] bg-no-repeat bg-cover bg-center w-full h-svh">
@@ -77,5 +77,3 @@ function App() {
     </>
   );
 }
-
-export default App;
