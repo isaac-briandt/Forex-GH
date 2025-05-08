@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-
+import { Converter } from "./components/Converter";
 export default function App() {
   return (
     <>
@@ -58,6 +58,8 @@ export default function App() {
                 <button className="p-6 cursor-pointer">
                   Currency Converter
                 </button>
+                <button className="p-6 cursor-pointer">News</button>
+                <button className="p-6 cursor-pointer">Currency</button>
               </div>
               <div className="bg-[#DCDCDC80] rounded-b-3xl flex justify-center p-6">
                 <div className="w-full h-[549px] bg-white rounded-[9px]">
@@ -65,6 +67,7 @@ export default function App() {
                 </div>
               </div>
             </div>
+            <Converter/>
           </div>
           <div className="absolute bottom-0 right-0 -z-10 overflow-hidden">
             <img
