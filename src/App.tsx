@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { Converter } from "./components/converter";
+import { Converter } from "./components/Converter";
 export default function App() {
   return (
     <>

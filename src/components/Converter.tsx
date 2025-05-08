@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export const Converter: React.FC = () => {
-  const [amount, setAmount] = useState<number | string>("");
+  const [amount, setAmount] = useState<string>("");
   const [fromCurrency, setFromCurrency] = useState<string>("USD");
   const [toCurrency, setToCurrency] = useState<string>("EUR");
   const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
@@ -49,9 +49,10 @@ return (
         </div>
         <button
             onClick={() => {
-                if (amount && !isNaN(Number(amount))) {
+                const numericAmount = parseFloat(amount);
+                if (!isNaN(numericAmount)) {
                     const conversionRate = 1.1; // Example conversion rate
-                    const result = Number(amount) * conversionRate;
+                    const result = numericAmount * conversionRate;
                     setConvertedAmount(result);
                 } else {
                     setConvertedAmount(null);
